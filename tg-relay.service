@@ -1,0 +1,15 @@
+[Unit]
+Description=Telegram -> tmux relay
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/tg-relay-watchdog
+Environment=TG_RELAY_ENV_FILE=/opt/tg-relay-watchdog/.env
+ExecStart=/usr/bin/python3 /opt/tg-relay-watchdog/tg_relay.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
