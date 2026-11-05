@@ -1,5 +1,8 @@
 # tg-relay-watchdog
 
+> **Archived.** This project continues as [agent-ops-telegram](https://github.com/vladosskins178/agent-ops-telegram).
+
+
 Drive a terminal program from Telegram. Messages you send to your bot are pasted into a tmux pane and Enter is pressed, so any long-running CLI (an AI coding agent, a REPL, a shell) can take instructions from your phone. A cron watchdog keeps the relay alive.
 
 We run this pattern in production to talk to AI agents on our servers. This is a clean, generic rewrite of it.
